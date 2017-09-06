@@ -1,0 +1,156 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                                   CONFIGURAÇÂO DO PACOTE LISTINGS
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings}
+%% To handle UTF-8, you should tell listings how to interpret the special characters by defining
+%% them like so
+
+\renewcommand{\lstlistingname}{Código} %
+\renewcommand{\lstlistlistingname}{Lista de \lstlistingname s} %
+
+\lstset{ %%
+  captionpos=b, % Posição da legenda
+  numberbychapter=false, % Numeração das legendas por documento e não por capítulo
+} %
+
+\lstset{literate= %
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 %
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1 %
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1 %
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1 %
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1 %
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1 %
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1 %
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1 %
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1 %
+  %% 
+  {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1 %
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1 %
+  {€}{{\EUR}}1 {£}{{\pounds}}1 %
+}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstdefinestyle{mpasm}{%
+  language=[x86masm]Assembler, %
+  %basewidth={.5em,0.5em}, %
+  %backgroundcolor=\color{white}, %
+  breakatwhitespace=true, %
+  breaklines=false, %
+  extendedchars=true, %
+  keepspaces=true, %
+  showspaces=false, %
+  showstringspaces=false, %
+  showtabs=false, %
+  tabsize=2, %
+  xleftmargin=-10pt, %
+  basicstyle=\linespread{1}\scriptsize\ttfamily, %
+  keywordstyle=\color{blue}, %
+  commentstyle=\color{green!40!black}, %
+  stringstyle=\color{orange}, %
+  %% 
+  morekeywords={\#define, \#undefine, \#include, end, equ, org, processor, radix, set, constant,
+  variable, if, else, ifdef, ifndef, endif, while, endw, __badram, __badrom, __maxram, __maxrom,
+  __idlocks, __config, config, da, data, db, de, dt, dw, cblock, endc, fill, res, error,
+  errorlevel, list, messg, nolist, page, space, subtitle, title, macro, endm, exitm, local,
+  expand, noexpand, access_ovr, bankisel, banksel, code, code_pack, extern, global, idata,
+  idata_acs, pagesel, pageselw, udata, udata_acs, udata_ovr, udata_shr}, %
+  keywordstyle=\color{yellow!40!black}, %
+  %% 
+  morekeywords= {bsr, option, pcl, pch, pclath, pclatu, prodh, prodl, tblath, tblatl, tblptr,
+  wreg, c, dc, z, ov,n, to, pd, gie, pc, tos, wdt, addwf, andwf, clrf, clrw, comf, decf, decfsz,
+  incf, iorwf, movf, movwf, nop, rlf, rrf, subwf, swapf, xorwf, bcf, bsf, btfsc, btfss, addlw,
+  andlw, call, clrwdt, goto, iorlw, movlw, option, retfie, retlw, return, sleep""sublw, tris,
+  xorlw, addcf, adddcf, b, bc, bdc, bnc, bndc, bnz, bz, clrc, clrdc, clrz, lcall, lgoto, movfw,
+  negf, setc, setdc, setz, skpc, skpdc, skpnc, skpndc, skpz}, %
+  keywordstyle=\bfseries\color{blue}, %
+} %
+
+
+
+\lstdefinestyle{python}{%
+  language=Python, %
+  basewidth={.5em,0.5em}, %
+  %backgroundcolor=\color{white}, %
+  breakatwhitespace=true, %
+  breaklines=false, %
+  extendedchars=true, %
+  keepspaces=true, %
+  showspaces=false, %
+  showstringspaces=false, %
+  showtabs=false, %
+  tabsize=2, %
+  xleftmargin=-10pt, %
+  basicstyle=\linespread{1}\scriptsize\ttfamily, %
+  keywordstyle=\color{blue}, %
+  commentstyle=\color{green!40!black}, %
+  stringstyle=\color{purple}, %
+} %
+
+
+
+\lstdefinestyle{shell}{%
+  language=bash, %
+  basewidth={.5em,0.5em}, %
+  %backgroundcolor=\color{white}, %
+  breakatwhitespace=false, %
+  breaklines=false, %
+  extendedchars=false, %
+  keepspaces=true, %
+  showspaces=false, %
+  showstringspaces=false, %
+  showtabs=false, %
+  tabsize=2, %
+  xleftmargin=5pt, %
+  basicstyle=\footnotesize\ttfamily, %
+%  keywordstyle=\color{blue}, %
+%  commentstyle=\color{green!40!black}, %
+%  stringstyle=\color{purple}, %
+%  frame=single, %
+  %float=h, %
+  xleftmargin=1.5cm,%
+  xrightmargin=1.5cm,%
+} %
+
+\lstdefinestyle{codigoiso}{%
+  basewidth={.5em,0.5em}, %
+  breakatwhitespace=false, %
+  breaklines=false, %
+  extendedchars=false, %
+  keepspaces=true, %
+  showspaces=false, %
+  showstringspaces=false, %
+  showtabs=false, %
+  tabsize=2, %
+  xleftmargin=5pt, %
+  basicstyle=\footnotesize\ttfamily, %
+%  keywordstyle=\color{blue}, %
+  commentstyle=\color{green!40!black}, %
+%  stringstyle=\color{purple}, %
+%  frame=single, %
+  float=h, %
+  %%
+  morecomment=[s]{(}{)},
+  %%
+  morekeywords={},
+} %
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\includempasm}[2]{\lstinputlisting[style=mpasm, fontadjust]{#1}}
+
+\newcommand{\includepython}[2]{\lstinputlisting[style=python, fontadjust]{#1}}
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main-tcc-ifg"
+%%% End:
+
+

@@ -1,0 +1,74 @@
+%%
+\documentclass[Dissertacao, brazilian]{dissertacao-next} %%
+%
+% PACKAGES
+%
+%% Extensão de arquivo das figuras (case sensitive)
+\DeclareGraphicsExtensions{.png,.jpg,.jpeg,.pdf} %
+\graphicspath{ %
+  %% Inclua os diretorios de figuras como o exemplo abaixo
+  {./fig/} %
+  {./img/} %
+} %
+%% ------------------------------------------------------------------------------
+\input{config-listings} % Configuração
+%%------------------------------------------------------------------------------
+\input{config-diss-ufg} % faça as modificações pertinentes no arquivo
+%%------------------------------------------------------------------------------
+\makeindex
+
+%
+% INICIO DO DOCUMENTO
+%
+
+\begin{document}
+%%------------------------------------------------------------------------------
+\maketitle
+%%------------------------------------------------------------------------------
+\include{./docs/epigrafe} %% opcional
+\include{./docs/dedicatoria} %% opcional
+\include{./docs/agradecimentos} %% opcional
+\include{./docs/resumo} %% obrigatório
+\include{./docs/abstract} %% obrigatório
+%%------------------------------------------------------------------------------
+\includeSumario % obrigatório, gerado automaticamente
+\includeListaFiguras % obrigatório caso haja mais de 3 figuras
+\includeListaTabelas % obrigatório caso haja mais de 3 tabelas
+%%------------------------------------------------------------------------------
+\include{./docs/abreviaturasesiglas}
+%%------------------------------------------------------------------------------
+\inicioIntroducao %%
+%%------------------------------------------------------------------------------
+\include{./docs/cap1} %% Introdução
+\include{./docs/cap2} %% 
+\include{./docs/cap3} %% 
+\include{./docs/cap4} %% 
+% E assim por diante até a conclusão
+\include{./docs/conclusao.tex}
+%%------------------------------------------------------------------------------
+\bibliographystyle{abntex2-alf}%
+\bibliography{referencias}%
+%%------------------------------------------------------------------------------
+\inicioAnexo
+\include{./docs/anexo1} %%
+%%------------------------------------------------------------------------------
+
+\inicioApendice %
+\include{./docs/apendice1} %%
+
+%%------------------------------------------------------------------------------
+%% \include{./docs/glossario}
+%%------------------------------------------------------------------------------
+\inicioIndice %
+%%------------------------------------------------------------------------------
+\end{document}
+
+%
+% FIM DO DOCUMENTO
+%
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% coding: utf-8
+%%% End:
